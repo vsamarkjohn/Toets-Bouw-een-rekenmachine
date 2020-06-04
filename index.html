@@ -23,9 +23,90 @@
   <!-- Start your project here-->  
   <div style="height: 100vh">
     <div class="flex-center flex-column">
-      <h1 class="text-hide animated fadeIn mb-4" style="background-image: url('https://mdbootstrap.com/img/logo/mdb-transparent-250px.png'); width: 250px; height: 90px;">MDBootstrap</h1>
-      <h5 class="animated fadeIn mb-3">Thank you for using our product. We're glad you're with us.</h5>
-      <p class="animated fadeIn text-muted">MDB Team</p>
+      <div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Rekenmachine</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body my-modalbody mx-3">
+            <div class="md-form mb-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col col-Input">
+                    <p>Input One</p><input class="inputStyle" id="inputDataOne" type="text" value="">
+                    <p>Input Two</p><input class="inputStyle" id="inputDataTwo" type="text" value="">
+                  </div>
+                <div class="col col-Output">
+                  <p>Rekenen Scherm</p><input id="inputDataOneNew" type="text" value="" name="display">  
+                  <div id="resultCalculate" > 
+                    <div id="resultCalculate2" ></div>   
+                             
+                  </div>   
+                </div>
+              </div>
+            </div>
+            <div class="md-form mb-4 d-flex">
+
+              <div class="row d-flex">
+                <button id="numberBtnId" type="button" class="btn numberBtn" value="1" onclick="clickButton(1)">1</button>
+                <button id="numberBtnId" type="button" class="btn numberBtn" value="2" onclick="clickButton(2)">2</button>
+                <button id="numberBtnId" type="button" class="btn numberBtn" value="3" onclick="clickButton(3)">3</button>
+                <button id="numberBtnId" type="button" class="btn numberBtn" value="4" onclick="clickButton(5)">4</button>
+                <button id="numberBtnId" type="button" class="btn numberBtn" value="5" onclick="clickButton(5)">5</button>
+                <button id="numberBtnId" type="button" class="btn numberBtn" value="6" onclick="clickButton(6)">6</button>
+                <button id="numberBtnId" type="button" class="btn numberBtn" value="7" onclick="clickButton(7)">7</button>
+                <button id="numberBtnId" type="button" class="btn numberBtn" value="8" onclick="clickButton(8)">8</button>
+                <button id="numberBtnId" type="button" class="btn numberBtn" value="9" onclick="clickButton(9)">9</button>
+                <button id="numberBtnId" type="button" class="btn numberBtn" value="0" onclick="clickButton(0)">0</button>
+                <button id="operatorBtnId" type="button" class="btn operatorBtn" value="add2" onclick="clickButton('+')">+</button>
+                <button id="operatorBtnId" type="button" class="btn operatorBtn" value="min" onclick="clickButton('-')">-</button>
+                <button id="operatorBtnId" type="button" class="btn operatorBtn" value="mul" onclick="clickButton('*')">*</button>
+                <button id="operatorBtnId" type="button" class="btn operatorBtn" value="div" onclick="clickButton('/')">/</button>
+                <button id="checkPriemGetal" type="button" class="btn operatorBtn" value="div" onclick="primeGetal()">Check PrimeGetalen</button><br>
+                <button class="btn btn-indigo" onclick="resutbtn()">Clear <i class="fas fa-paper-plane-o ml-1"></i></button>
+                <!-- <form action="">
+                <input class="textField" name="textField">
+              </form>  -->
+              <!-- <p>Notitie: Knoppen nog niet klaar. Ik vind mijn code is moeilijk, maar ik zal probeer op ander tijd te oplossen
+                Inputs boven en onder knopen is werken.
+              </p> -->
+              </div>
+              <button type="button" class="btn operatorBtn" value="=" onclick="equalButton()">=</button><br>
+            </div>
+          </div>
+          </div>
+          
+          <div class="modal-footer d-flex justify-content-center">
+            <div class="row d-flex">
+              
+              <div id="operatorBtn">
+             <button id="addition" class="btn myOperatoBtn" value="add" onclick="calculate('add')">Add</button>
+             <button id="subtraction" class="btn myOperatoBtn" value="sub" onclick="calculate('sub')">Sub</button>
+             <button id="multiplication" class=" btn myOperatoBtn" value="mul" onclick="calculate('mul')">Mul</button>
+             <button id="division" class=" btn myOperatoBtn" value="div" onclick="calculate('div')">Div</button> 
+               </div>
+             </div>
+            <select id="operator">
+              <option value="add2">Add</option>
+              <option value="sub">Subtract</option>
+              <option value="div">Divide</option>
+              <option value="mul">Multiply </option>
+          </select>
+            <button class="btn btn-indigo" onclick="calculatebtn()">calculate<i class="fas fa-paper-plane-o ml-1"></i></button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal"  data-target="#modalSubscriptionForm">Launch
+        Modal Subscription Form</a>
+    </div>
     </div>
   </div>
   <!-- End your project here-->
@@ -39,7 +120,7 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
+  <script type="text/javascript" src="js/mainScript.js"></script>
 
 </body>
 </html>

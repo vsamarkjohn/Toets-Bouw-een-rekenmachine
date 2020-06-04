@@ -1,0 +1,36 @@
+.col-Output {
+    background-color: aqua;
+}
+.col-Output2 {
+    background-color: beige;
+    margin: 10px;
+}
+.operatorBtn {
+    background-color: chartreuse;
+}
+
+.numberBtn{
+    background-color: darkcyan;
+}
+.myOperatoBtn {
+    background-color: darkgray;
+    margin: 10px;
+}
+.resultCalculate2 {
+    width: 100px;
+}
+.inputDataOne {
+    position: absolute;
+}
+.p {
+    font-size: 10px;
+}
+#checkPriemGetal {
+    background-color: darkorange;
+}
+.my-modalbody {
+    height: 550px;
+}
+.inputStyle{
+    margin: 5px;
+}
